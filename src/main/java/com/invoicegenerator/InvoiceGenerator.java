@@ -1,5 +1,7 @@
 package com.invoicegenerator;
 
+import InvoiceSummary.InvoiceSummary;
+
 public class InvoiceGenerator {
 
     private static final double MINIMUN_COST_PER_KILOMETER = 10;
@@ -14,11 +16,11 @@ public class InvoiceGenerator {
 
     }
 
-    public double calculateFare(Ride[] rides) {
+    public InvoiceSummary calculateFare(Ride[] rides) {
         double totalFare = 0;
         for (Ride ride : rides) {
             totalFare += this.calculateFare(ride.distance, ride.time);
         }
-        return totalFare;
+        return null;
     }
 }
