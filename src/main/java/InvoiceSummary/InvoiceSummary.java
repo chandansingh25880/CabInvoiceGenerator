@@ -18,5 +18,6 @@ public class InvoiceSummary {
         if (o == null || getClass() != o.getClass()) return false;
         InvoiceSummary summary = (InvoiceSummary) o;
         return numOfRides == summary.numOfRides && Double.compare(summary.totalFare, totalFare) == 0;
+
     }
 }
